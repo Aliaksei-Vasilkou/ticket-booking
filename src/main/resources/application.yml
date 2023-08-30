@@ -1,4 +1,8 @@
 spring:
+  data:
+    mongodb:
+      uri: mongodb://ticket_app:password@localhost:27017/ticketAppDb?authSource=admin&authMechanism=SCRAM-SHA-1
+
   jpa:
     properties:
       hibernate:
@@ -27,6 +31,8 @@ logging:
       hibernate:
         SQL: debug
         type: trace
+    springframework:
+      data: debug
     net:
       sf:
         ehcache=debug:
